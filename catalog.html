@@ -1,0 +1,1406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Catálogo</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/logotipo_favicon.png2" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles_catalog.css" rel="stylesheet" />
+
+
+    <style>
+
+        /*Estilos para el menú de catálogo*/
+        .masthead {
+            height: 120vh;
+            padding: 0;
+        }
+
+        .container {
+            margin-left: 0;
+            padding-left: 0;
+
+        }
+
+        .container,
+        .container-fluid,
+        .container-xxl,
+        .container-xl,
+        .container-lg,
+        .container-md,
+        .container-sm {
+            width: 100%;
+            padding-right: var(--bs-gutter-x, 0.75rem);
+            padding-left: var(--bs-gutter-x, 0.05rem);
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .navbar-brand {
+            margin-left: 9.9%;
+            margin-right: 4.8%;
+            width: 10%;
+            padding-left: 0%;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .ftco-navbar-light .navbar-nav>.nav-item>.nav-link {
+            font-size: 14px;
+            padding-top: 1.2rem;
+            padding-bottom: 1.2rem;
+            padding-left: 20px;
+            padding-right: 200px;
+            font-weight: 400;
+            color: #333333;
+            position: relative;
+            opacity: 1 !important;
+        }
+
+        #mainNav .navbar-brand {
+        padding: 0;
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+
+        /*Responsive*/
+
+        @media (max-width:581px) {
+            .playsinline {
+                width: 100%;
+                height: 100%;
+            }
+
+            header {
+                margin: 0%;
+                padding: 0%;
+            }
+
+            .masthead {
+                padding-top: 0%;
+                padding-bottom: 0%;
+                margin: 0%;
+            }
+
+            #about {
+                padding-top: 0%;
+            }
+
+        }
+
+        @media (max-width:414px) {
+
+            /*Navegador*/
+            #navbarTogglerDemo02 {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                background-color: white;
+            }
+
+            .playsinline {
+                width: 100%;
+            }
+
+            .masthead {
+                padding: 0%;
+            }
+
+            #logotipo img {
+                text-align: center;
+                margin-left: 2%;
+            }
+
+            #mainNav {
+                display: flex;
+                text-align: center;
+            }
+
+            #about {
+                padding: 0px;
+            }
+
+            #posicion_boton_buscar {
+                height: 10%;
+                width: 100%;
+                background-color: white;
+            }
+        }
+
+        /*Contenido de GALLERY*/
+        #listado_elementos {
+            font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            font-size: 98%;
+            display: flex;
+
+            margin-left: -20px;
+            list-style: none;
+            gap: 1rem;
+            padding-left: 8%;
+        }
+
+        #barra_buscar {
+            margin-left: 3%;
+        }
+
+        #logotipo {
+            height: 70px;
+            width: 110px;
+            margin-left: -100%;
+            margin-top: -15%;
+        }
+
+        #bloque-menu {
+            margin-bottom: 10px;
+        }
+
+        #mainNav {
+            height: 117px;
+        }
+
+        #search_space_input {
+            margin-top: 25%;
+            margin-left: 5%;
+            height: 2%;
+        }
+
+        #search_space_boton {
+            margin-top: -15%;
+            height: 2%;
+        }
+
+        #posicion_boton_buscar {
+            margin-top: -3%;
+        }
+
+        #search_space_boton:hover {
+            background-color: rgb(237, 237, 237);
+            color: white;
+        }
+
+        #li_listado_header li {
+            position: relative;
+            margin-left: 110px;
+            padding-right: 110px;
+        }
+
+        #listado_header:hover {
+            text-decoration: underline;
+        }
+
+        #li_listado_header:hover {
+            text-decoration: underline;
+        }
+
+        #li_listado_header:hover .main-links-listado {
+            display: block;
+            opacity: 1;
+        }
+
+        .main-links-listado {
+            background-color: rgb(0, 0, 0);
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            opacity: 0;
+            display: none;
+            background: rgba(255, 255, 255, 0.775);
+            color: black;
+            margin-top: 20px;
+        }
+
+        .main-links-listado li {
+            list-style: none;
+            padding-top: 13px;
+            padding-bottom: 25px;
+            font-size: small;
+        }
+
+        .main-links-listado li:hover {
+            text-decoration: underline;
+        }
+
+        .playsinline {
+            width: 100%;
+        }
+
+        .icono_contacto {
+            margin-bottom: 20px;
+        }
+
+        svg {
+            color: black;
+        }
+
+
+
+        .main-links-listado li {
+            list-style: none;
+            padding-top: 13px;
+            padding-bottom: 25px;
+            font-size: small;
+            margin-top: 10px;
+        }
+
+        .main-links-listado li:hover {
+            text-decoration: underline;
+        }
+
+        .playsinline {
+            width: 100%;
+        }
+
+        .icono_contacto {
+            margin-bottom: 20px;
+        }
+
+        svg {
+            color: black;
+        }
+
+        .main-links-listado li {
+            list-style: none;
+            padding-top: 13px;
+            padding-bottom: 25px;
+            font-size: small;
+            margin-top: 10px;
+        }
+
+        .main-links-listado li:hover {
+            text-decoration: underline;
+        }
+
+        .playsinline {
+            width: 100%;
+        }
+
+        .icono_contacto {
+            margin-bottom: 20px;
+        }
+
+        .justify-content-center {
+
+            justify-content: center !important;
+        }
+
+        .d-flex {
+            display: flex !important;
+        }
+
+        .ftco-navbar-light {
+            background: white;
+            z-index: 3;
+            padding: 10px 10px;
+            border-radius: 0px;
+            -webkit-box-shadow: 0px 5px 20px -17px rgba(0, 0, 0, 0.34);
+            -moz-box-shadow: 0px 5px 20px -17px rgba(0, 0, 0, 0.34);
+            box-shadow: 0px 5px 20px -17px rgba(0, 0, 0, 0.34);
+        }
+
+        @media (max-width: 1000px) {
+            .ftco-navbar-light {
+                background: rgb(255, 255, 255);
+                position: relative;
+                top: 0;
+                padding: 10px 15px;
+            }
+        }
+
+        .ftco-navbar-light .navbar-brand {
+            color: #000;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .ftco-navbar-light .navbar-brand:hover,
+        .ftco-navbar-light .navbar-brand:focus {
+            color: #000;
+        }
+
+        .justify-content-center {
+
+            justify-content: center !important;
+        }
+
+        .d-flex {
+            display: flex !important;
+        }
+
+        /*Carousel styling*/
+        @import url("https://fonts.googleapis.com/css?family=Libre+Franklin:300,400,600,700,800&display=swap");
+
+        div.carousel-nav-icon>svg {
+            height: 48px;
+            width: 48px;
+        }
+
+        html[data-bs-theme="dark"] div.carousel-nav-icon>svg {
+            fill: #FFF !important;
+        }
+
+        @media (max-width: 767px) {
+            .carousel-inner .carousel-item>div {
+                display: none;
+            }
+
+            .carousel-inner .carousel-item>div:first-child {
+                display: block;
+            }
+        }
+
+        h2 {
+            font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .carousel-inner .carousel-item.active,
+        .carousel-inner .carousel-item-next,
+        .carousel-inner .carousel-item-prev {
+            display: flex;
+        }
+
+        /* medium and up screens */
+        @media (min-width: 768px) {
+
+            .carousel-inner .carousel-item-end.active,
+            .carousel-inner .carousel-item-next {
+                transform: translateX(33%);
+            }
+
+            .carousel-inner .carousel-item-start.active,
+            .carousel-inner .carousel-item-prev {
+                transform: translateX(-33%);
+            }
+        }
+
+        .carousel-inner .carousel-item-end,
+        .carousel-inner .carousel-item-start {
+            transform: translateX(0);
+        }
+
+        /* Nothing below this point is needed. */
+        .dark-mode-toggle {
+            bottom: 3%;
+            right: 3%;
+            z-index: 10;
+        }
+
+        .dark-mode-toggle,
+        .dark-mode-toggle>*,
+        .dark-mode-toggle>*>* {
+            cursor: pointer;
+        }
+
+        .my-5-2 {
+            margin-top: 0.5rem !important;
+            margin-bottom: 0.5rem !important;
+            padding: 77px;
+        }
+
+        .portfolio-caption-heading {
+            font-size: 1.5rem;
+            font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            font-weight: 700;
+            margin-bottom: 0;
+        }
+
+        #mod_texto_contenidos {
+            letter-spacing: normal;
+            text-align: center;
+            font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
+        }
+
+        .ftco-navbar-light {
+            background: white;
+            z-index: 3;
+            padding: 10px 10px;
+            border-radius: 0px;
+            -webkit-box-shadow: 0px 5px 20px -17px rgba(0, 0, 0, 0.34);
+            -moz-box-shadow: 0px 5px 20px -17px rgba(0, 0, 0, 0.34);
+            box-shadow: 0px 5px 20px -17px rgba(0, 0, 0, 0.34);
+        }
+
+        @media (max-width: 1000px) {
+            .ftco-navbar-light {
+                background: rgb(255, 255, 255);
+                position: relative;
+                top: 0;
+                padding: 10px 15px;
+            }
+        }
+
+        .ftco-navbar-light .navbar-brand {
+            color: #000;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .ftco-navbar-light .navbar-brand:hover,
+        .ftco-navbar-light .navbar-brand:focus {
+            color: #000;
+        }
+
+        @media (max-width: 1000px) {
+            .ftco-navbar-light .navbar-brand {
+                color: #fff;
+            }
+        }
+
+        @media (max-width: 1000px) {
+            .ftco-navbar-light .navbar-nav {
+                padding-bottom: 10px;
+            }
+        }
+
+        .ftco-navbar-light .navbar-nav>.nav-item>.nav-link {
+            font-size: 14px;
+            padding-top: 1.2rem;
+            padding-bottom: 1.2rem;
+            padding-left: 20px;
+            padding-right: 20px;
+            font-weight: 400;
+            color: #333333;
+            position: relative;
+            opacity: 1 !important;
+        }
+
+
+        .ftco-navbar-light .navbar-nav>.nav-item>.nav-link:hover {
+            color: #fc7fb2;
+        }
+
+        @media (max-width: 1000px) {
+            .ftco-navbar-light .navbar-nav>.nav-item>.nav-link {
+                padding-left: 0;
+                padding-right: 0;
+                padding-top: .5rem;
+                padding-bottom: .5rem;
+                color: rgba(255, 255, 255, 0.7);
+            }
+
+            .ftco-navbar-light .navbar-nav>.nav-item>.nav-link:hover {
+                color: #fff;
+            }
+        }
+
+        .ftco-navbar-light .navbar-nav>.nav-item .dropdown-menu {
+            border: none;
+            background: #fff;
+            -webkit-box-shadow: 0px 10px 34px -20px rgba(0, 0, 0, 0.41);
+            -moz-box-shadow: 0px 10px 34px -20px rgba(0, 0, 0, 0.41);
+            box-shadow: 0px 10px 34px -20px rgba(0, 0, 0, 0.41);
+            border-radius: 4px;
+            padding: 0;
+        }
+
+        .ftco-navbar-light .navbar-nav>.nav-item .dropdown-menu .dropdown-item {
+            font-size: 12px;
+            color: #000;
+        }
+
+        .ftco-navbar-light .navbar-nav>.nav-item .dropdown-menu .dropdown-item:hover,
+        .ftco-navbar-light .navbar-nav>.nav-item .dropdown-menu .dropdown-item:focus {
+            background: #fc7fb2;
+            color: #fff;
+        }
+
+        .ftco-navbar-light .navbar-nav>.nav-item.cta>a {
+            color: #fff;
+            background: #fc7fb2;
+            border-radius: 0px;
+        }
+
+        @media (max-width: 767.98px) {
+            .ftco-navbar-light .navbar-nav>.nav-item.cta>a {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+
+        @media (max-width: 1000px) {
+            .ftco-navbar-light .navbar-nav>.nav-item.cta>a {
+                color: #fff;
+                background: #fc7fb2;
+                border-radius: 4px;
+            }
+        }
+
+        .ftco-navbar-light .navbar-nav>.nav-item.active>a {
+            color: #fc7fb2;
+        }
+
+        @media (max-width: 1000px) {
+            .ftco-navbar-light .navbar-nav>.nav-item.active>a {
+                color: #fff;
+            }
+        }
+
+        .ftco-navbar-light .navbar-toggler {
+            border: none;
+            color: rgba(255, 255, 255, 0.5) !important;
+            cursor: pointer;
+            padding-right: 0;
+            text-transform: uppercase;
+            font-size: 16px;
+            letter-spacing: .1em;
+        }
+
+        .ftco-navbar-light .navbar-toggler:focus {
+            outline: none !important;
+        }
+
+        .social-media p a {
+            border: 1px solid #e6e6e6;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 4px;
+        }
+
+        .social-media p a span {
+            color: #4d4d4d;
+        }
+
+        .social-media p a:hover {
+            background: #fc7fb2;
+            border-color: #fc7fb2;
+        }
+
+        .social-media p a:hover span {
+            color: #fff;
+        }
+
+        @media (max-width: 1000px) {
+            .social-media p a {
+                border-color: #fff;
+                width: 30px;
+                height: 30px;
+            }
+
+            .social-media p a span {
+                color: #fff;
+            }
+        }
+
+        @media (max-width: 465px) {
+            div.carousel-nav-icon>svg {
+                width: 0px;
+            }
+        }
+
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="assets/logotipo_favicon.png" />
+</head>
+
+<body id="page-top">
+
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top ftco-navbar-light" id="mainNav"
+        style="position: fixed;width: 100%;">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img id="logotipo" src="assets/img/logotipo_sculp.png" /></a>
+            <div class="social-media order-lg-last">
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav ml-auto mr-md-3" style="background-color: white; gap: 20%;">
+                    <li class="nav-item active"><a href="index.html" class="nav-link"
+                            style="color:#000;padding-left: 4%;">Inicio</a></li>
+                    <li class="nav-item"><a href="catalog.html" class="nav-link"
+                            style="color:#000;padding-left: 4%;">Catálogo</a>
+                    </li>
+                    <li class="nav-item"><a href="#contact" class="nav-link"
+                            style="color:#000;padding-left: 4%;">Contacto</a>
+                    </li>
+                    <li class="nav-item"><a href="register.html" class="nav-link"
+                            style="color:#000;padding-left: 4%;">Carrito</a>
+                    </li>
+                    <li class="nav-item"><a href="gallery.html" class="nav-link"
+                            style="color:#000;padding-left: 4%;">Próximamente</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Masthead-->
+    <br><br><br>
+    <header class="masthead">
+        <div class="container">
+            <div class="masthead-subheading">Bienvenido a nuestro catálogo</div>
+            <a class="btn btn-primary btn-xl text-uppercase" href="#portfolio">Catálogo</a>
+        </div>
+    </header>
+
+    <!-- Carousel-->
+    <section class="my-5-2">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-10 offset-1 col-lg-8 offset-lg-2 text-center">
+                    <h2 class="section-heading text-uppercase">Top ventas</h2>
+                    <p class="section-subheading text-muted">
+                        Lo más requerido por nuestros clientes.
+                    </p>
+                </div>
+            </div>
+            <div class="row mx-auto my-auto justify-content-center">
+                <div class="col">
+                    <div class="row">
+                        <div class="col-1 d-flex align-items-center justify-content-center">
+                            <a role="button" href="#recipeCarousel" role="button" data-bs-slide="prev">
+                                <div class="carousel-nav-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <path
+                                            d="m88.6,121.3c0.8,0.8 1.8,1.2 2.9,1.2s2.1-0.4 2.9-1.2c1.6-1.6 1.6-4.2 0-5.8l-51-51 51-51c1.6-1.6 1.6-4.2 0-5.8s-4.2-1.6-5.8,0l-54,53.9c-1.6,1.6-1.6,4.2 0,5.8l54,53.9z" />
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-10">
+                            <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="carousel-item active">
+                                        <div class="col-md-4">
+                                            <div class="card">
+                                                <div class="card-img">
+                                                    <img src="assets/img/portfolio/1.jpg" class="img-fluid">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="col-md-4">
+                                            <div class="card">
+                                                <div class="card-img">
+                                                    <img src="assets/img/portfolio/2.jpg" class="img-fluid">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="col-md-4">
+                                            <div class="card">
+                                                <div class="card-img">
+                                                    <img src="assets/img/portfolio/4.jpg" class="img-fluid">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="col-md-4">
+                                            <div class="card">
+                                                <div class="card-img">
+                                                    <img src="assets/img/portfolio/5.jpg" class="img-fluid">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="col-md-4">
+                                            <div class="card">
+                                                <div class="card-img">
+                                                    <img src="assets/img/portfolio/6.jpg" class="img-fluid">
+                                                </div>
+                                                <!--  <div class="card-img-overlay h-100 d-flex align-items-center justify-content-center text-white"></div>
+-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="col-md-4">
+                                            <div class="card">
+                                                <div class="card-img">
+                                                    <img src="assets/img/portfolio/2.jpg" class="img-fluid">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-1 d-flex align-items-center justify-content-center">
+                            <a role="button" href="#recipeCarousel" role="button" data-bs-slide="next">
+                                <div class="carousel-nav-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <path
+                                            d="m40.4,121.3c-0.8,0.8-1.8,1.2-2.9,1.2s-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.2 0-5.8l51-51-51-51c-1.6-1.6-1.6-4.2 0-5.8 1.6-1.6 4.2-1.6 5.8,0l53.9,53.9c1.6,1.6 1.6,4.2 0,5.8l-53.9,53.9z" />
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final del Carousel-->
+
+    <script>
+        let items = document.querySelectorAll('.carousel .carousel-item')
+
+        items.forEach((el) => {
+            const minPerSlide = 3
+            let next = el.nextElementSibling
+            for (var i = 1; i < minPerSlide; i++) {
+                if (!next) {
+                    // wrap carousel by using first child
+                    next = items[0]
+                }
+                let cloneChild = next.cloneNode(true)
+                el.appendChild(cloneChild.children[0])
+                next = next.nextElementSibling
+            }
+        })
+    </script>
+
+    <!-- Portfolio Grid-->
+    <section class="page-section bg-light" id="portfolio">
+        <div class="container">
+            <div class="text-center">
+                <br><br>
+                <h2 class="section-heading text-uppercase">Catálogo</h2>
+                <h3 class="section-subheading text-muted" style="font-size: 1rem;
+                font-weight: 400;
+                font-style: italic;
+                font-family: 'Roboto Slab', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+                margin-bottom: 4rem;">Selecciona la obra que más conecte contigo.</h3>
+                <br>
+                <br>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <!-- Portfolio item 1-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+
+                            <img class="img-fluid" src="assets/img/portfolio/1.jpg" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading" style="text-align: center;">Hora del Té</div>
+                            <div class="portfolio-caption-subheading text-muted"
+                                style="font-style: italic;
+                            font-family: 'Roboto Slab', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;text-align: center;">
+                                19 300 &#8364</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <!-- Portfolio item 2-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
+                            <img class="img-fluid" src="assets/img/portfolio/2.jpg" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading" style="text-align: center;">Busto Veneciano</div>
+                            <div class="portfolio-caption-subheading text-muted"
+                                style="font-style: italic;
+                            font-family: 'Roboto Slab', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;text-align: center;">
+                                21 500 &#8364</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <!-- Portfolio item 3-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
+                            <img class="img-fluid" src="assets/img/portfolio/3.jpg" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading" style="text-align: center;">Cleopatra</div>
+                            <div class="portfolio-caption-subheading text-muted"
+                                style="font-style: italic;
+                            font-family: 'Roboto Slab', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;text-align: center;">
+                                23 200 &#8364</div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+                    <!-- Portfolio item 4-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
+
+                            <img class="img-fluid" src="assets/img/portfolio/4.jpg" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading" style="text-align: center;">Aelo</div>
+                            <div class="portfolio-caption-subheading text-muted"
+                                style="font-style: italic;
+                            font-family: 'Roboto Slab', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;text-align: center;">
+                                18 333 &#8364</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
+                    <!-- Portfolio item 5-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
+
+                            <img class="img-fluid" src="assets/img/portfolio/5.jpg" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading" style="text-align: center;">Orquesta de Cuerda</div>
+                            <div class="portfolio-caption-subheading text-muted"
+                                style="font-style: italic;
+                            font-family: 'Roboto Slab', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;text-align: center;">
+                                20 000 &#8364</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <!-- Portfolio item 6-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
+
+                            <img class="img-fluid" src="assets/img/portfolio/6.jpg" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading" style="text-align: center;">Figura Azteca</div>
+                            <div class="portfolio-caption-subheading text-muted"
+                                style="font-style: italic;
+                            font-family: 'Roboto Slab', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;text-align: center;">
+                                32 000 &#8364</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br>
+    </section>
+
+    <!-- Contact-->
+    <section class="contact-section bg-black" id="contact">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5">
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <div class="card py-4 h-100">
+                        <div class="card-body text-center">
+                            <!-- Imagen -->
+                            <img class="icono_contacto" src="assets/img/ubicacion.png"><br>
+                            <h4 class="text-uppercase m-0">Ubicación</h4>
+                            <hr class="my-4 mx-auto" />
+                            <div class="small text-black-50">C. Toledo, 45, 28901 Getafe, Madrid</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <div class="card py-4 h-100">
+                        <div class="card-body text-center">
+                            <img style="margin-top: 18px;" id="icono_contacto_correo_electronico" class="icono_contacto"
+                                src="assets/img/correo_electronico.png">
+                            <h4 class="text-uppercase m-0">Correo electrónico</h4>
+                            <hr class="my-4 mx-auto" />
+                            <div class="small text-black-50"><a>informacion_productos@sculp.net</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <div class="card py-4 h-100">
+                        <div class="card-body text-center">
+                            <img style="margin-top: 9px;height: 27px;" class="icono_contacto"
+                                src="assets/img/telefono.png"><br>
+                            <h4 class="text-uppercase m-0">Teléfono</h4>
+                            <hr class="my-4 mx-auto" />
+                            <div class="small text-black-50">+34 123 456 789</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="social d-flex justify-content-center">
+                <a class="mx-2" href="#!"><i class="fab fa-instagram"></i></a>
+                <a class="mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+                <a class="mx-2" href="#!"><i class="fab fa-twitter"></i></a>
+                <a class="mx-2" href="#!"><i class="fab fa-youtube"></i></a>
+                <a class="mx-2" href="#!"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
+    </section>
+    <!-- Footer-->
+    <footer class="footer bg-black small text-center text-white-50">
+        <div class="container px-4 px-lg-5">Copyright &copy; Sculp 2023</div>
+    </footer>
+    <!-- Portfolio Modals-->
+    <!-- Portfolio item 1 modal popup-->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="container">
+                    <br>
+                    <div style="text-align:right;margin-right: 1%;margin-top: 1%;" class="close-modal"
+                        data-bs-dismiss="modal">
+                        <svg style="width:35px;height: 35px;color: rgb(0, 0, 0);" class="svg-inline--fa fa-xmark me-1"
+                            aria-hidden="true" focusable="false" data-prefix="fas" data-icon="xmark" role="img"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg="">
+                            <path fill="currentColor"
+                                d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <!-- Project details-->
+                                <br>
+                                <h2 class="text-uppercase" style="text-align: center;">Hora del Té</h2>
+                                <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/1.jpg" alt="..." />
+                                <p id="mod_texto_contenidos">Tomar té es un pequeño ritual para ti mismo. Consiéntete
+                                    con sus aromas y sabores.
+                                    Date la oportunidad de descubrir
+                                    todo lo que hay detrás de este mundo lleno de sensaciones. Aquí encontrarás una
+                                    pequeña escenografía de dicha experiencia
+                                    acorde a un estilo de vida sereno, la presentación de tenues colores cura el cuerpo
+                                    y la mente.</p>
+                                <ul class="list-inline">
+                                    <li style="text-align: center;letter-spacing: normal;">
+                                        <p
+                                            style="font-family: 'Roboto Slab', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;">
+                                            <strong>Artista:</strong>
+                                            Vigilia Serenae
+                                        </p>
+                                    </li>
+                                    <li style="text-align: center;letter-spacing: normal;">
+
+                                        <p
+                                            style="font-family: 'Roboto Slab', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;">
+                                            <strong>Colección:</strong>
+                                            Primavera 2023
+                                        </p>
+                                    </li>
+                                </ul>
+                                <br>
+                                <div style="text-align: center;">
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal"
+                                        type="button" style="text-align: center;">
+                                        <svg style="color: white;" class="svg-inline--fa fa-xmark me-1"
+                                            aria-hidden="true" focusable="false" data-prefix="fas" data-icon="xmark"
+                                            role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"
+                                            data-fa-i2svg="">
+                                            <path fill="currentColor"
+                                                d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z">
+                                            </path>
+                                        </svg>
+                                        Próximamente
+                                    </button>
+                                </div><br><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio item 2 modal popup-->
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="container">
+                    <br>
+                    <div style="text-align:right;margin-right: 1%;margin-top: 1%;" class="close-modal"
+                        data-bs-dismiss="modal">
+                        <svg style="width:35px;height: 35px;color: rgb(0, 0, 0);" class="svg-inline--fa fa-xmark me-1"
+                            aria-hidden="true" focusable="false" data-prefix="fas" data-icon="xmark" role="img"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg="">
+                            <path fill="currentColor"
+                                d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <!-- Project details-->
+                                <br>
+                                <h2 class="text-uppercase" style="text-align: center;">Busto Veneciano</h2>
+                                <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/2.jpg" alt="..." />
+                                <br>
+                                <p id="mod_texto_contenidos">Vuelven las aventuras, los misterios, las incertidumbres y,
+                                    como no, ¡el romance!
+                                    Esta vez, Serena, transformista de andróginos rasgos, se involucra en la
+                                    investigación del asesinato de su gran amigo, el profesor Balaguer.
+                                    La investigación la lleva de nuevo a Italia, concretamente a Venecia, donde podremos
+                                    pasear por sus históricas calles, hasta incluso poder imaginarnos
+                                    sin dificultad alguna, tomándonos un café en la mismísima plaza San Marco.
+                                    Al más puro estilo de “Los diez negritos” de Agatha Christie, Serena se verá aisladx
+                                    en una solitaria isla
+                                    veneciana, junto con 9 personas sospechosas de poder ser el asesino del Profesor.
+                                </p>
+                                <br>
+                                <ul class="list-inline">
+                                    <li style="text-align: center;letter-spacing: normal;">
+                                        <p
+                                            style="font-family: 'Roboto Slab', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;">
+                                            <strong>Artista:</strong>
+                                            Le Bella Dame
+                                        </p>
+                                    </li>
+                                    <li style="text-align: center;letter-spacing: normal;">
+                                        <p
+                                            style="font-family: 'Roboto Slab', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;">
+                                            <strong>Colección:</strong>
+                                            Primavera 2023
+                                        </p>
+                                    </li>
+                                </ul>
+                                <br>
+                                <div style="text-align: center;">
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal"
+                                        type="button" style="text-align: center;">
+                                        <svg style="color: white;" class="svg-inline--fa fa-xmark me-1"
+                                            aria-hidden="true" focusable="false" data-prefix="fas" data-icon="xmark"
+                                            role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"
+                                            data-fa-i2svg="">
+                                            <path fill="currentColor"
+                                                d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z">
+                                            </path>
+                                        </svg>
+                                        Próximamente
+                                    </button>
+                                </div>
+                            </div><br><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio item 3 modal popup-->
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="container">
+                    <br>
+                    <div style="text-align:right;margin-right: 1%;margin-top: 1%;" class="close-modal"
+                        data-bs-dismiss="modal">
+                        <svg style="width:35px;height: 35px;color: rgb(0, 0, 0);" class="svg-inline--fa fa-xmark me-1"
+                            aria-hidden="true" focusable="false" data-prefix="fas" data-icon="xmark" role="img"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg="">
+                            <path fill="currentColor"
+                                d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <!-- Project details-->
+                                <br>
+                                <h2 class="text-uppercase" style="text-align: center;">Cleopatra</h2>
+                                <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/3.jpg" alt="..." />
+                                <p id="mod_texto_contenidos">Reina egipcia coronada en el 51 a. C. Relacionada con Julio
+                                    César y Marco Antonio.
+                                    Última gobernante de
+                                    la dinastía ptolemaica. Se convirtió en reina sucediendo a su padre, Ptolomeo XII.
+                                    En el 31 a. C., Octavio,
+                                    futuro emperador Augusto, derrotó a Marco Antonio y Cleopatra en la
+                                    batalla de Accio en 31 a. C. Tras la muerte de Cleopatra, Egipto se convirtió en
+                                    provincia del Imperio romano.
+                                    Conocida por sus enemigos como "La Vibora del Nilo". Fue una mujer muy
+                                    bella y seductora, con unas dotes políticas innegables.
+                                    Dominaba siete idiomas y, caso
+                                    singular, fue el único miembro de su dinastía que hablaba la lengua de sus súbditos:
+                                    el egipcio.</p>
+                                <ul class="list-inline">
+                                    <li style="text-align: center;letter-spacing: normal;">
+                                        <p
+                                            style="font-family: 'Roboto Slab', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;">
+                                            <strong>Artista:</strong>
+                                            Roman Delacarta Cortés
+                                        </p>
+                                    </li>
+                                    <li style="text-align: center;letter-spacing: normal;">
+                                        <p
+                                            style="font-family: 'Roboto Slab', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;">
+                                            <strong>Colección:</strong>
+                                            Primavera 2023
+                                        </p>
+                                    </li>
+                                </ul>
+                                <br>
+                                <div style="text-align: center;">
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal"
+                                        type="button" style="text-align: center;">
+                                        <svg style="color: white;" class="svg-inline--fa fa-xmark me-1"
+                                            aria-hidden="true" focusable="false" data-prefix="fas" data-icon="xmark"
+                                            role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"
+                                            data-fa-i2svg="">
+                                            <path fill="currentColor"
+                                                d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z">
+                                            </path>
+                                        </svg>
+                                        Próximamente
+                                    </button>
+                                </div><br><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio item 4 modal popup-->
+    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="container">
+                    <br>
+                    <div style="text-align:right;margin-right: 1%;margin-top: 1%;" class="close-modal"
+                        data-bs-dismiss="modal">
+                        <svg style="width:35px;height: 35px;color: rgb(0, 0, 0);" class="svg-inline--fa fa-xmark me-1"
+                            aria-hidden="true" focusable="false" data-prefix="fas" data-icon="xmark" role="img"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg="">
+                            <path fill="currentColor"
+                                d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <!-- Project details-->
+                                <br>
+                                <h2 class="text-uppercase" style="text-align: center;">Aelo</h2>
+                                <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/4.jpg" alt="..." />
+                                <p id="mod_texto_contenidos">Las Harpías eran hijas de Electra y Taumante, y hermanas de
+                                    Iris y de Arce. Hesíodo
+                                    las describe en su Teogonía como
+                                    criaturas de «adorables cabellos», lo cual entronca con su aspecto originariamente
+                                    bello.
+                                </p>
+
+                                <p id="mod_texto_contenidos">
+                                    Su mito definitorio está ligado a Fineo, rey de Tracia que tenía el don de la
+                                    profecía. Zeus, furioso con él por
+                                    haber revelado sin consentimiento secretos de los dioses del Olimpo, le castigó
+                                    confinándolo en una isla con un
+                                    festín del que no podía comer nada, pues las Harpías siempre robaban la comida de
+                                    sus manos justo antes de que
+                                    pudiera tomarla.
+                                </p>
+                                <p id="mod_texto_contenidos">Este castigo se prolongó hasta la llegada de Jasón y los
+                                    Argonautas, que enviaron
+                                    tras las Harpías
+                                    a los héroes alados Calais y Zetes, los Boréadas. Estos lograron espantarlas, pero
+                                    no las mataron a petición de
+                                    Iris, quien prometió que Fineo no volvería a ser molestado</p>
+                                <p id="mod_texto_contenidos">Agradecido por su ayuda, Fineo contó a los Argonautas cómo
+                                    superar las Simplégades
+                                    para poder continuar su periplo
+                                </p>
+                                <ul class="list-inline">
+                                    <li style="text-align: center;letter-spacing: normal;">
+                                        <p
+                                            style="font-family: 'Roboto Slab', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;">
+                                            <strong>Artista:</strong>
+                                            Juan Francisco Delacroix Frostz
+                                        </p>
+                                    </li>
+                                    <li style="text-align: center;letter-spacing: normal;">
+                                        <p
+                                            style="font-family: 'Roboto Slab', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;">
+                                            <strong>Colección:</strong>
+                                            Primavera 2023
+                                        </p>
+                                    </li>
+                                </ul>
+                                <br>
+                                <div style="text-align: center;">
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal"
+                                        type="button" style="text-align: center;">
+                                        <svg style="color: white;" class="svg-inline--fa fa-xmark me-1"
+                                            aria-hidden="true" focusable="false" data-prefix="fas" data-icon="xmark"
+                                            role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"
+                                            data-fa-i2svg="">
+                                            <path fill="currentColor"
+                                                d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z">
+                                            </path>
+                                        </svg>
+                                        Próximamente
+                                    </button>
+                                </div><br><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio item 5 modal popup-->
+    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="container">
+                    <br>
+                    <div style="text-align:right;margin-right: 1%;margin-top: 1%;" class="close-modal"
+                        data-bs-dismiss="modal">
+                        <svg style="width:35px;height: 35px;color: rgb(0, 0, 0);" class="svg-inline--fa fa-xmark me-1"
+                            aria-hidden="true" focusable="false" data-prefix="fas" data-icon="xmark" role="img"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg="">
+                            <path fill="currentColor"
+                                d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <!-- Project details-->
+                                <br>
+                                <h2 class="text-uppercase" style="text-align: center;">Orquesta de cuerda</h2>
+                                <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/5.jpg" alt="..." />
+                                <p id="mod_texto_contenidos">Entre todos los tipos de bandas, la orquesta de cuerda es
+                                    la más pequeña formada
+                                    únicamente por instrumentos de cuerda. Generalmente suele
+                                    estar integrada por unos 8 violines, aunque en ocasiones puede llegar hasta los 18
+                                    contando violas y violonchelos.
+                                    En este caso no se requiere de ningún director y se pueden
+                                    reconocer fácilmente por ese estilo clásico y barroco tan particular.</p>
+                                <ul class="list-inline">
+                                    <li style="text-align: center;letter-spacing: normal;">
+                                        <p
+                                            style="font-family: 'Roboto Slab', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;">
+                                            <strong>Artista:</strong>
+                                            Rodrigo Romero Romero
+                                        </p>
+                                    </li>
+                                    <li style="text-align: center;letter-spacing: normal;">
+                                        <p
+                                            style="font-family: 'Roboto Slab', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;">
+                                            <strong>Colección:</strong>
+                                            Primavera 2023
+                                        </p>
+                                    </li>
+                                </ul>
+                                <br>
+                                <div style="text-align: center;">
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal"
+                                        type="button" style="text-align: center;">
+                                        <svg style="color: white;" class="svg-inline--fa fa-xmark me-1"
+                                            aria-hidden="true" focusable="false" data-prefix="fas" data-icon="xmark"
+                                            role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"
+                                            data-fa-i2svg="">
+                                            <path fill="currentColor"
+                                                d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z">
+                                            </path>
+                                        </svg>
+                                        Próximamente
+                                    </button>
+                                </div><br><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio item 6 modal popup-->
+    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="container">
+                    <br>
+                    <div style="text-align:right;margin-right: 1%;margin-top: 1%;" class="close-modal"
+                        data-bs-dismiss="modal">
+                        <svg style="width:35px;height: 35px;color: rgb(0, 0, 0);" class="svg-inline--fa fa-xmark me-1"
+                            aria-hidden="true" focusable="false" data-prefix="fas" data-icon="xmark" role="img"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg="">
+                            <path fill="currentColor"
+                                d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <!-- Project details-->
+                                <br>
+                                <h2 class="text-uppercase" style="text-align: center;">Figura Azteca</h2>
+                                <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/6.jpg" alt="..." />
+                                <p id="mod_texto_contenidos">el imperio azteca fue una de las unidades políticas más
+                                    importantes de la América
+                                    precolombina. Gracias
+                                    a una alianza político-militar, los aztecas impusieron su civilización entre los
+                                    siglos XIV y XVI.
+                                    Dominaron el centro y sur del actual México, e incluso parte de Guatemala, llegando
+                                    a abarcar un territorio
+                                    de alrededor de 300.000 km². Su cultura y economía fueron muy prósperas: se
+                                    desarrollaron avanzadas técnicas
+                                    agrícolas, se fomentó la industria textil y minera, se estableció un floreciente
+                                    comercio de alimentos,
+                                    artesanía y esclavos y se levantaron singulares construcciones arquitectónicas como
+                                    las pirámides escalonadas.</p>
+                                <ul class="list-inline">
+                                    <li style="text-align: center;letter-spacing: normal;">
+                                        <p
+                                            style="font-family: 'Roboto Slab', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;">
+                                            <strong>Artista:</strong>
+                                            Silvia Orellana Parra
+                                        </p>
+                                    </li>
+                                    <li style="text-align: center;letter-spacing: normal;">
+                                        <p
+                                            style="font-family: 'Roboto Slab', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;">
+                                            <strong>Colección:</strong>
+                                            Primavera 2023
+                                        </p>
+                                    </li>
+                                </ul>
+                                <br>
+                                <div style="text-align: center;">
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal"
+                                        type="button" style="text-align: center;">
+                                        <svg style="color: white;" class="svg-inline--fa fa-xmark me-1"
+                                            aria-hidden="true" focusable="false" data-prefix="fas" data-icon="xmark"
+                                            role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"
+                                            data-fa-i2svg="">
+                                            <path fill="currentColor"
+                                                d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z">
+                                            </path>
+                                        </svg>
+                                        Próximamente
+                                    </button>
+                                    <br><br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/scripts.js"></script>
+
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
+
+    <!-- Header -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main2.js"></script>
+</body>
+
+</html>
